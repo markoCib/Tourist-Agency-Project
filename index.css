@@ -1,0 +1,38 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.destination {
+    width: 700px;
+    position: relative;
+}
+
+/* As wide and as high as the parent element which is above - .destination */
+.destination img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.destination .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: 0.25s ease-in;
+}
+
+.destination .overlay:hover {
+    opacity: 1;
+    cursor: pointer;
+}
