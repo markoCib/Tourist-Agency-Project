@@ -2,8 +2,58 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.destinations-grid {
+    display: grid;
+    grid-template-areas:
+        "berlin berlin madrid"
+        "berlin berlin paris"
+        "moscow rome paris"
+        "budapest budapest barcelona"
+        "sanktpeterburg vienna prague";
+}
+
+#berlin {
+    grid-area: berlin;
+}
+
+#barcelona {
+    grid-area: barcelona;
+}
+
+#paris {
+    grid-area: paris;
+}
+
+#moscow {
+    grid-area: moscow;
+}
+
+#rome {
+    grid-area: rome;
+}
+
+#budapest {
+    grid-area: budapest;
+}
+
+#madrid {
+    grid-area: madrid;
+}
+
+#sanktpeterburg {
+    grid-area: sanktpeterburg;
+}
+
+#vienna {
+    grid-area: vienna;
+}
+
+#prague {
+    grid-area: prague;
+}
+
 .destination {
-    width: 700px;
+    /* width: 700px; */
     position: relative;
 }
 
