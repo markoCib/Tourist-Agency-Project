@@ -7,9 +7,14 @@ body {
     grid-template-areas:
         "berlin berlin madrid"
         "berlin berlin paris"
-        "moscow rome paris"
+        "rome moscow paris"
         "budapest budapest barcelona"
-        "sanktpeterburg vienna prague";
+        "prague sanktpeterburg vienna";
+    row-gap: 16px;
+    column-gap: 16px;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 #berlin {
@@ -53,7 +58,6 @@ body {
 }
 
 .destination {
-    /* width: 700px; */
     position: relative;
 }
 
@@ -85,4 +89,33 @@ body {
 .destination .overlay:hover {
     opacity: 1;
     cursor: pointer;
+}
+
+/* SCREEN SIZE SMALLER THAN 1100px */
+@media only screen and (max-width: 1100px) {
+    .destinations-grid {
+        max-width: 100%;
+        grid-template-areas:
+            "berlin berlin"
+            "rome madrid"
+            "moscow paris"
+            "budapest budapest"
+            "prague barcelona"
+            "sanktpeterburg vienna";
+    }
+}
+
+/* SCREEN SIZE SMALLER THAN 768px */
+@media only screen and (max-width: 768px) {
+    .destinations-grid {
+        grid-template-areas:
+            "berlin berlin"
+            "rome rome"
+            "madrid madrid"
+            "moscow paris"
+            "budapest budapest"
+            "prague barcelona"
+            "sanktpeterburg sanktpeterburg"
+            "vienna vienna";
+    }
 }
