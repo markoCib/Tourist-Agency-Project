@@ -2,6 +2,44 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0;
+}
+
+.navbar .left {
+    font-size: 44px;
+    font-weight: bold;
+}
+
+.navbar .right {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .right img {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar .right a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .right a:hover {
+    text-decoration: underline;
+}
+
 .destinations-grid {
     display: grid;
     grid-template-areas:
@@ -13,7 +51,6 @@ body {
     row-gap: 16px;
     column-gap: 16px;
     width: 100%;
-    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -102,8 +139,17 @@ body {
     text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.8);
 }
 
+.footer {
+    text-align: center;
+    padding: 64px;
+}
+
 /* SCREEN SIZE SMALLER THAN 1100px */
 @media only screen and (max-width: 1100px) {
+    .container {
+        max-width: 100%;
+    }
+
     .destinations-grid {
         max-width: 100%;
         grid-template-areas:
@@ -113,6 +159,11 @@ body {
             "budapest budapest"
             "prague barcelona"
             "sanktpeterburg vienna";
+    }
+
+    .footer {
+        text-align: center;
+        padding: 32px;
     }
 }
 
@@ -132,5 +183,10 @@ body {
 
     .destination .overlay {
         font-size: 28px;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 16px;
     }
 }
