@@ -40,6 +40,23 @@ body {
     text-decoration: underline;
 }
 
+.navbar .hamburger {
+    display: none;
+}
+
+.hamburger {
+    height: 50px;
+    width: 50px;
+}
+
+.navbar .bar {
+    background-color: black;
+    height: 4px;
+    width: 38px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
 .destinations-grid {
     display: grid;
     grid-template-areas:
@@ -169,6 +186,33 @@ body {
 
 /* SCREEN SIZE SMALLER THAN 768px */
 @media only screen and (max-width: 768px) {
+    .destinations-grid {
+        margin-top: 150px;
+    }
+
+    .navbar {
+        padding: 16px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: white;
+        width: 100%;
+        padding: 16px 24px;
+        box-sizing: border-box;
+    }
+
+    .navbar .right {
+        display: none;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .destinations-grid {
         grid-template-areas:
             "berlin berlin"
